@@ -2,6 +2,10 @@
 
 Dead simple Mongo DB
 
+```bash
+npm i --save mungu
+```
+
 ```js
 const url = '***'
 const dbName = '***'
