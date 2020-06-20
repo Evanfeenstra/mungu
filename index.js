@@ -2,7 +2,10 @@ const MongoClient = require('mongodb').MongoClient;
 
 let collection
 
-module.exports = async function({url,dbName,collectionName}){
+let dolog = true
+
+module.exports = async function({url,dbName,collectionName,logging}){
+  if(!logging) dolog=false
   try {
     await connect(url,dbName,collectionName)
     return db
@@ -81,5 +84,6 @@ function unix(){
 }
 
 function log(e){
+  if(!dolog) return
   console.log('=> MUNGU ERROR:',e)
 }
