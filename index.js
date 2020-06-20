@@ -7,7 +7,8 @@ module.exports = async function({url,dbName,collectionName}){
     await connect(url,dbName,collectionName)
     return db
   } catch(e){
-    throw e
+    log('failed to connect')
+    return null
   }
 }
 

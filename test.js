@@ -11,7 +11,7 @@ async function test(){
     dbName,
     collectionName,
   })
-  await db.set('hi',{hi:'deee'})
+  await db.set('hi',{hi:'daaee'})
   const d = await db.get('hi')
   console.log(d,typeof d)
   // await db.del('hi')
