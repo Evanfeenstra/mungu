@@ -2,10 +2,10 @@ const MongoClient = require('mongodb').MongoClient;
 
 let collection
 
-let dolog = true
+let dolog = false
 
 module.exports = async function({url,dbName,collectionName,logging}){
-  if(!logging) dolog=false
+  if(logging===true) dolog=true
   try {
     await connect(url,dbName,collectionName)
     return db
